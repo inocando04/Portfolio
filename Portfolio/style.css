@@ -1,0 +1,28 @@
+body{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #11071F; 
+
+    height: 800vh;
+}
+
+
+.nav_header{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: right;
+    margin-right: 10%;
+    gap: 30px;
+    color: rgb(255, 255, 255);
+    
+}
+
+.nav_container{
+    background: linear-gradient(135deg, rgba(26, 11, 46, 0.177), rgba(26	,11	,46, 0.177));
+    border:1px solid rgba(249, 243, 243, 0.581); box-shadow: 0 10px 100px 0 rgba(226, 220, 220, 0.37);
+    border-radius: 20px;
+   margin: 1%;
+}
