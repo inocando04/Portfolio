@@ -152,7 +152,8 @@ section{
 
 span{
     color: #02d04a;
-    font-size: 34px;
+    font-size: 80%;
+    
 }
 
 .home-content h3{
@@ -230,9 +231,10 @@ span{
 }
 
 .typing-text{
-    font-size: 34px;
+    font-size: 80%;
     font-weight: 600;
     min-width: 280px;
+
 }
 
 .typing-text span{
