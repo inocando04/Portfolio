@@ -15,3 +15,19 @@ window.onscroll = () => {
         };
     });
 };
+
+
+function showSidebar(){
+    const sidebar = document.querySelector('nav');
+    sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+    sidebar.style.transform = 'translateX(0)';  
+    sidebar.style.transition = 'transform 0.3s ease';  
+    
+}
+
+function hideSidebar(){
+    const sidebar = document.querySelector('nav');
+    sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+    sidebar.style.transform = 'translateX(30rem)';  
+    sidebar.style.transition = 'transform 0.3s ease'; 
+}

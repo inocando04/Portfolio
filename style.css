@@ -15,6 +15,10 @@ html{
     font-size: 62.5%;
 }
 
+.hideSide{
+    display: none;
+}
+
 body{
     width: 100%;
     height: 100vh;
@@ -24,6 +28,7 @@ body{
 }
 
 header{
+   
     margin-top: 20px;
     position: fixed;
     top: 0;
@@ -55,7 +60,7 @@ nav a{
     color: white;
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in-out;
     border-bottom: 3px solid transparent;
 }
 
@@ -65,23 +70,51 @@ nav a.active{
     border-bottom: 3px solid #02d04a;
 }
 
+.burger{
+    display: none;
+}
+
+
+
 @media(max-width:995px){
-    nav{
-        position: absolute;
+
+    .burger{
         display: block;
+        
+       
+    }
+
+    .hideSide{
+        display: block;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+       
+    }
+
+    
+    nav{
+        position: fixed;
+        display: none;
         top: 0;
         right: 0;
-        width: 40%;
-        border-left: 3px solid #02d04a;
-        border-bottom: 3px solid #02d04a;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        width: 250px;
+        height: 100%;
+        z-index: 999;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        background-color: #16161662;
+
+       
+        transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.3s ease; 
+       
     }
 
     nav.active{
         display: block;
+        
     }
 
     nav a{
@@ -92,6 +125,7 @@ nav a.active{
 
     nav a:hover,
     nav a.active{
+        background-color: rgb(35, 34, 34);
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #02d04a;
@@ -119,6 +153,7 @@ section{
 
 span{
     color: #02d04a;
+    font-size: 34px;
 }
 
 .home-content h3{
@@ -271,4 +306,3 @@ span{
         margin-top: 4rem;
     }
 }
-
